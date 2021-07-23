@@ -67,3 +67,72 @@
     float: right;
     left: 300px;
   }
+
+  .lista{
+    float: right;
+    text-align: center;
+    clear: both;
+    vertical-align: 10px;
+
+  }
+
+  li:hover{
+    background-color: violet;
+  }
+
+  li:active{
+    font:message-box;
+  }
+
+  .motivos ul,ol{
+    list-style: none;
+  }
+
+  .paleta-cores{
+    padding: 20px;
+    clear: both;
+    float: right;
+  }
+
+  div.c1:active, div.c2:active, div.c3:active, div.c4:active, div.c5:active{
+    border: 1px solid rgba(15, 15, 15, 0.933);   
+  }
+
+  div.c1{
+    color: lawngreen;
+  }
+
+  div.c2{
+    color: rgb(133, 13, 13);
+  }
+
+  div.c3{
+    color: rgb(94, 88, 88);
+  }
+
+  div.c4{
+    color: rgb(3, 3, 3);
+  }
+
+  div.c5{
+    color:lightcoral;
+  }
+
+  div.c1{
+    font-size: 10px;
+    font:italic;
+  }
+
+  div.c2{
+    font-family:cursive;
+  }
+
+  div.c3{
+    font:italic;
+    font-size: 25px;
+  }
+
+  div.c5{
+    font:small-caption;
+    font: italic;
+  }
