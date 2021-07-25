@@ -76,16 +76,21 @@
 
   }
 
-  li:hover{
+  .lista li:hover{
     background-color: violet;
   }
 
-  li:active{
+  .lista li:active{
     font:message-box;
   }
 
-  .motivos ul,ol{
+  li.motivos{
     list-style: none;
+  }
+
+  .motivos{
+    clear: both;
+    float: right;
   }
 
   .paleta-cores{
@@ -135,4 +140,76 @@
   div.c5{
     font:small-caption;
     font: italic;
+  }
+
+  .combinações {
+    clear: both;
+    padding: 5px;
+    bottom: 5px;
+
+  }
+
+  .fundo-amarelo {
+    background-color: yellowgreen;
+  }
+
+  /* fiz com classe individuais. após olhar o gabarito vi este atributo especifico para substituir*/
+  ol.fundo-amarelo li:nth-child(even){
+    color: green;
+  }
+
+  ol.fundo-amarelo li:nth-child(odd){
+    text-transform: uppercase;
+  }
+
+  h1 em, h3 em{
+    color: red;
+    font-size: 40px;
+    border: 1px solid black;
+  
+  }
+
+  h3.red {
+    color: red;
+  }
+
+  ol.fundo-amarelo li, ul.linguagens li, ul.aliados li{
+    font-size: 20px;
+  }
+
+  ol.fundo-amarelo li em {
+    font-weight:bold;
+  }
+
+  /*olhei no gabarito pois não achei nenhuma forma de fazer isto :( */
+  #linguagens li:not(:nth-child(n+4)){
+    color: blue;
+  }
+
+  .java {
+    background-color: pink;
+  }
+
+  #aliados li a:hover {
+    font-weight: bold;
+  }
+  
+  #aliados li a[href*="stackoverflow"] {
+    color: orange;
+  }
+  
+  #aliados li a[href*="w3schools"] {
+    color: green;
+  }
+  
+  #aliados li a[href*="mozilla"] {
+    color: black;
+  }
+  
+  #aliados li a[href*="devdocs"] {
+    color: yellow;
+  }
+  
+  #aliados li a[href*="trybe"] {
+    color: green;
   }
