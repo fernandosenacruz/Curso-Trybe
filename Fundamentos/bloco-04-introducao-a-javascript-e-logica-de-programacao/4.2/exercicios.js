@@ -63,13 +63,37 @@ let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 
 // console.log(minNumber); 7 ok
 
-let array = 25;
-let num = [];
+// const MAX_LENGTH = 25;
+// let division = 0;
 
-for (index = 1; index < array; index += 1){
-    num.push(index);
-    let division = ~~num[index/2];
-    console.log(division);
+// for (index = 1; index <= MAX_LENGTH; index += 1){
+//     division = index/2;
+//     console.log(division);
+//     // console.log(index); 8 ok
+// }
+// 9 ok
+
+// for (let index = 1; index < numbers.length; index += 1) {
+//   for (let secondIndex = 0; secondIndex < index; secondIndex += 1) {
+//     if (numbers[index] < numbers[secondIndex]) {
+//       let position = numbers[index];
+//       numbers[index] = numbers[secondIndex];
+//       numbers[secondIndex] = position;
+//       console.log(position);
+//     }
+//   }
+// }
+// console.log();
+
+// for (let index = 1; index < numbers.length; index += 1) {
+//     numbers.sort((a,b) => b -a);
+// }
+// console.log(numbers); ok com método sort
+
+let numbersMultiplicaded = [];
+
+for (let index = 0; index < numbers.length; index += 1){
+    numbersMultiplicaded.push(numbers[index] * numbers[index+1] || numbersMultiplicaded.push(numbers[index] * 2));      
 }
 
-// console.log(num);
+console.log(numbersMultiplicaded);
