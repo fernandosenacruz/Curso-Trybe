@@ -53,3 +53,23 @@ let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 //         console.log("nenhum valor ímpar encontrado")
 //     } 6 ok
 
+// let minNumber = numbers[0];
+
+//  for (let index = 0; index <= numbers.length-1; index +=1){
+//      if (numbers[index] < minNumber){
+//          minNumber = numbers[index];
+//      }
+// } 
+
+// console.log(minNumber); 7 ok
+
+let array = 25;
+let num = [];
+
+for (index = 1; index < array; index += 1){
+    num.push(index);
+    let division = ~~num[index/2];
+    console.log(division);
+}
+
+// console.log(num);
