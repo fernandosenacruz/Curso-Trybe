@@ -1,6 +1,6 @@
-let n = 5;
-let squareAsterisk = "";
+let n = 8;
 
+// let squareAsterisk = "";
 // for (let line = 0; line < n; line += 1){
 //     squareAsterisk += "*";
 // }
@@ -40,33 +40,32 @@ let squareAsterisk = "";
 //     asterisks = ""; spaces = "";
 // } 3 ok
     
-// let numbersOfAsterisk = 1;
-// let numbersOfSoaces = (n - 1)/2; 
-// let heigth = n / 2;
+let numbersOfAsterisk = 1;
+let numbersOfSpaces = (n - 1)/2; 
+let heigth = n / 2;
 
+if(n % 2 == 0){
+   numbersOfAsterisk = 2 ;
+}
 
-//  for (let lines = 0; lines < 3; lines += 1){
-//     let left = "";
-//     let rigth ="";
-//     let meio = "";
-//     for (let spaces = 0; spaces < numbersOfSoaces; spaces += 1){ // spaços esquerda
-//         left += " ";
-        
-//     }
+ for (let lines = 0; lines < heigth; lines += 1){
+    let spacesLeft = "";
+    let spacesRight ="";
+    let spacesMiddle = "";
+
+    for (let spaces = 0; spaces < numbersOfSpaces; spaces += 1){ 
+        spacesLeft += " ";        
+    }
     
-//     for(let spaces = 0; spaces < numbersOfAsterisk; spaces += 1){
-//         meio += "*";
-        
-//     }
-//     for (let spaces = 0; spaces < numbersOfSoaces; spaces += 1){ // spaços esquerda
-//         rigth += " ";
-        
-//     }
+    for(let spaces = 0; spaces < numbersOfAsterisk; spaces += 1){
+        spacesMiddle += "*";        
+    }
+    for (let spaces = 0; spaces < numbersOfSpaces; spaces += 1){
+        spacesRight += " ";        
+    }    
     
-//     asterisks = left + meio + rigth;
-    
-//     console.log(asterisks);
-//     numbersOfSoaces -= 1;
-//     numbersOfAsterisk += 2;
-    
-// }
+    let triangle = spacesLeft + spacesMiddle + spacesRight;    
+    console.log(triangle);
+    numbersOfSpaces -= 1;
+    numbersOfAsterisk += 2;    
+}
