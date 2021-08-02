@@ -141,14 +141,28 @@ console.log();
 /*Escreva um programa que defina três números em variáveis e retorne true se pelo menos uma das três for par. Caso contrário, ele retorna false .
 Bonus: use somente um if .*/
 
+a = 1, b = 2, c = 3;
 
+if(a % 2 == 0 || b % 2 == 0 || c % 2 == 0){
+    console.log(true)
+}else{
+    console.log(false)
+}
+console.log();
 
 
 
 /*Escreva um programa que defina três números em variáveis e retorne true se pelo menos uma das três for ímpar. Caso contrário, ele retorna false .
 Bonus: use somente um if .*/
 
+a = 8, b = 2, c = 6;
 
+if(a % 2 !== 0 || b % 2 !== 0 || c % 2 !== 0){
+    console.log(true)
+}else{
+    console.log(false)
+}
+console.log();
 
 
 /*Escreva um programa que se inicie com dois valores em duas variáveis diferentes: o custo de um produto e seu valor de venda. A partir dos valores, calcule quanto de lucro (valor de venda descontado o custo do produto) a empresa terá ao vender mil desses produtos.
@@ -158,8 +172,18 @@ O lucro de um produto é o resultado da subtração do valor de venda pelo custo
 valorCustoTotal = valorCusto + impostoSobreOCusto
 lucro = valorVenda - valorCustoTotal (lucro de um produto)*/
 
+let custoProduto = 100;
+let imposto = custoProduto*20/100;
+let valorCustoTotal = custoProduto + imposto;
+let valorProduto = 130;
+let lucro = valorProduto - valorCustoTotal;
 
-
+if(custoProduto < 0 || valorProduto < 0){
+    console.log("Erro!")
+}else{
+    console.log(lucro*1000);
+}
+console.log();
 
 
 /*Uma pessoa que trabalha de carteira assinada no Brasil tem descontados de seu salário bruto o INSS e o IR. Faça um programa que, dado um salário bruto, calcule o líquido a ser recebido.
@@ -186,3 +210,50 @@ Fazendo a conta, temos: (7,5% de R$ 2.670,00) - R$ 142,80 = R$ 57,45
 O último cálculo para conseguir o salário líquido é R$ 2.670,00 - R$ 57,45 (salário-base - valor IR) = R$ 2.612,55.
 Resultado: R$ 2.612,55.
 Dica: que tal identificar as alíquotas com variáveis de nomes explicativos?*/
+
+let salarioBruto = 3000.00;
+let INSS;
+
+switch (INSS){
+    case salarioBruto <= 1556.94:
+        INSS = salarioBruto * 8 / 100;
+        break;
+    case salarioBruto > 1556.94 && salarioBruto <= 2594.92:
+        INSS = salarioBruto * 9 /100;
+        break;
+    case salarioBruto > 2594.92 && salarioBruto <= 5189.82:
+        INSS = salarioBruto * 11 /100;
+        break;
+    case salarioBruto > 5189.82:
+        INSS = 570.88;
+        break;
+    default:
+        break;
+}
+
+let salarioBase = salarioBruto - INSS;
+let IR;
+
+switch (IR){
+    case salarioBase <= 1903.98:
+        IR = 0;
+        break;
+    case salarioBase > 1903.98 && salarioBase <= 2826.65:
+        IR = (salarioBase * 7.5 /100) - 142.80;
+        break;
+    case salarioBase > 2594.92 && salarioBase <= 3751.05:
+        IR = (salarioBase * 15 /100) - 354.80;
+        break;
+    case salarioBase > 3751.05 && salarioBase <= 4664.68:
+        IR = (salarioBase * 22.5 / 100) - 636.13;
+        break;
+    case salarioBase > 4664.68:
+        IR = (salarioBase * 27.5 / 100) - 869.36;
+        break;
+    default:
+        break;
+}
+
+let salarioLiquido = salarioBruto - IR - INSS;
+
+console.log(salarioLiquido);
