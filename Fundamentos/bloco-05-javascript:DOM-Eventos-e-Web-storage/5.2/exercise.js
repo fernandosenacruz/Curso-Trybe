@@ -25,3 +25,13 @@ section2.className = "left-content";
 main.appendChild(document.createElement('section'));
 let section3 = document.getElementsByTagName("section")[2];
 section3.className = "right-content";
+
+// requisto 7
+// https://www.codegrepper.com/code-examples/javascript/how+to+insert+image+in+javascript+code
+let img = document.createElement("img");
+img.src = "https://picsum.photos/200";
+section2.appendChild(img);
+img.className = "small-image";
+
+// requisito 8
+
