@@ -8,3 +8,12 @@ let main = document.getElementsByTagName('main')[0];
 main.className = "main-content";
 
 // requisito 3
+main.appendChild(document.createElement('section'));
+let section = document.getElementsByTagName("section")[0];
+section.className = "center-content";
+
+// requisito 4
+section.appendChild(document.createElement("p"));
+let p = document.getElementsByTagName('p')[0];
+
+// requisto 5
