@@ -51,3 +51,16 @@ function createH3(h3quantity){
     }
 }
 createH3(3);
+
+// requisito 10
+let h1 = document.getElementsByTagName('h1')[0];
+h1.className = "title";
+
+// requisito 11
+function classNameH3(name, quantity){
+    for (let index = 0; index < quantity; index += 1) {
+        let h3 = document.querySelectorAll('h3')[index];
+        h3.className = name;
+    }
+}
+classNameH3('description', 3);
