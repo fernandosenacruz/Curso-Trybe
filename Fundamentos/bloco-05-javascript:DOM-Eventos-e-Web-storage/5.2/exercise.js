@@ -17,3 +17,11 @@ section.appendChild(document.createElement("p"));
 let p = document.getElementsByTagName('p')[0];
 
 // requisto 5
+main.appendChild(document.createElement('section'));
+let section2 = document.getElementsByTagName("section")[1];
+section2.className = "left-content";
+
+// requisito 6
+main.appendChild(document.createElement('section'));
+let section3 = document.getElementsByTagName("section")[2];
+section3.className = "right-content";
