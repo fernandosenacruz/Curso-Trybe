@@ -64,3 +64,11 @@ function classNameH3(name, quantity){
     }
 }
 classNameH3('description', 3);
+
+// requisito 12
+main.removeChild(section2);
+
+// requisito 13
+section3.style.marginRight = 'auto';
+
+// requisito 14
