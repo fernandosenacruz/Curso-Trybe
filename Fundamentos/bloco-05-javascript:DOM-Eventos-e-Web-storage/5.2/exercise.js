@@ -34,4 +34,14 @@ section2.appendChild(img);
 img.className = "small-image";
 
 // requisito 8
+const value = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+const ul = document.querySelector(".right-content");
+ul.appendChild(document.createElement('ul'));
+for (let index = 0; index < value.length; index += 1) {
+    let number = value[index];
+    let numberList = document.createElement('li');
+    numberList.innerText = number;
+    ul.appendChild(numberList);
+}
 
+// requisito 9
