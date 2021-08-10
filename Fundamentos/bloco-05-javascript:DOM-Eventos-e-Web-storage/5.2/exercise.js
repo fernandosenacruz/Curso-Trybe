@@ -45,3 +45,9 @@ for (let index = 0; index < value.length; index += 1) {
 }
 
 // requisito 9
+function createH3(h3quantity){
+    for (let index = 0; index < h3quantity; index += 1) {
+        main.appendChild(document.createElement('h3'));        
+    }
+}
+createH3(3);
