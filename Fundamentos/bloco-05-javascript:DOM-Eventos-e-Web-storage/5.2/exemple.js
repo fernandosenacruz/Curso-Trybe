@@ -1,1 +1,1 @@
-document.getElementById("elementoOndeVoceEsta").parentElement = "brown";
+console.log(document.getElementById("elementoOndeVoceEsta").parentElement = "brown");
