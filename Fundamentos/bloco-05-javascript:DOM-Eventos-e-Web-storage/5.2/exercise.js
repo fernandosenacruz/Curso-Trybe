@@ -72,3 +72,11 @@ main.removeChild(section2);
 section3.style.marginRight = 'auto';
 
 // requisito 14
+section.style.backgroundColor = "green";
+
+// requisito 15
+// let finalLi = document.querySelectorAll('section')[1].childNodes[0];
+
+ul.lastChild.remove();
+ul.removeChild(ul.lastChild);
+// for (let index = finalLi.length-2; index < finalLi.length; index += 1) {}
