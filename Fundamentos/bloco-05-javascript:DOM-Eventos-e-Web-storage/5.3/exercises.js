@@ -95,13 +95,14 @@ let sextaFeriado = document.querySelector(".holidão");
 let valorSexta = [];
 function pushFridayArray(){
   for (let index = 0; index < sexta.length; index += 1) {
-    valorSexta.push(sexta[index]);   
+    valorSexta.push(sexta[index].innerHTML); 
   }
+  return valorSexta;
 }
-pushFridayArray();
 
 
-function changeInnerText() {
+
+function changeInnerText(valorSexta = pushFridayArray()) {
   // if(sextaFeriado.innerHTML !== "sextou") {
   //   sextaFeriado.innerHTML = "sextou";
   // }
@@ -113,7 +114,7 @@ function changeInnerText() {
     if (sexta[index].innerHTML !== "sextou") {
       sexta[index].innerHTML = "sextou";
     }else {
-      sexta[index].innerHTML = valorSexta.innerHTML[index];
+      sexta[index].innerHTML = valorSexta[index];
     }
   }
 }
