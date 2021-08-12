@@ -53,7 +53,7 @@ function addDays() {
     }
   }
 }
-addDays();
+addDays(); // 1 ok
 
 function addHolidaysButton() {
   let holidays = document.querySelector(".buttons-container");
@@ -62,20 +62,23 @@ function addHolidaysButton() {
   benjamimButton.innerText = "Feriados";
   holidays.appendChild(benjamimButton);
 }
-addHolidaysButton();
+addHolidaysButton(); //2 ok
+
+let buttomHoliday = document.querySelector("#btn-holiday");
 
 function changeBackgroundColor() {
   let feriado = document.querySelectorAll(".holiday");
+  let body = document.querySelector('body');
+  let styleBody = window.getComputedStyle(body, null).getPropertyValue('background-color');
   for (let index = 0; index < feriado.length; index += 1) {
-    if (feriado[index].style.backgrondColor === "rgb(238,238,238)") {
+    if (feriado[index].style.backgrondColor === styleBody) {
       feriado[index].style.backgrondColor = "red";
     } else {
-      feriado[index].style.backgrondColor = "rgb(238,238,238)";
+      feriado[index].style.backgrondColor = styleBody;
     }
   }
 }
-let buttom = document.querySelector("#btn-holiday");
-buttom.addEventListener("click", changeBackgroundColor());
+buttomHoliday.addEventListener("click", changeBackgroundColor);
 
 function addFridayButton() {
   let friday = document.querySelector(".buttons-container");
@@ -84,4 +87,63 @@ function addFridayButton() {
   benjamimButton.innerText = "Sexta-Feira";
   friday.appendChild(benjamimButton);
 }
-addFridayButton();
+addFridayButton(); // 4 ok
+
+let sexta = document.querySelectorAll(".friday");
+let sextaFeriado = document.querySelector(".holidão");
+
+let valorSexta = [];
+function pushFridayArray(){
+  for (let index = 0; index < sexta.length; index += 1) {
+    valorSexta.push(sexta[index]);   
+  }
+}
+pushFridayArray();
+
+
+function changeInnerText() {
+  // if(sextaFeriado.innerHTML !== "sextou") {
+  //   sextaFeriado.innerHTML = "sextou";
+  // }
+  // else {
+  //   sextaFeriado.innerHTML = sextaFeriado.innerHTML;
+  // }
+  
+  for (let index = 0; index < sexta.length; index += 1) {
+    if (sexta[index].innerHTML !== "sextou") {
+      sexta[index].innerHTML = "sextou";
+    }else {
+      sexta[index].innerHTML = valorSexta.innerHTML[index];
+    }
+  }
+}
+let buttomFriday = document.querySelector("#btn-friday");
+buttomFriday.addEventListener("click", changeInnerText);
+
+function zoomIn() {
+  let day = document.querySelectorAll('.day');
+  for (let index = 0; index < day.length; index += 1) {
+    day[index].addEventListener('mouseover', function(ent) {
+    ent.target.style.fontSize = '30px';
+  })    
+  } 
+}
+zoomIn(); // 6 ok
+
+// function zoomIn() {
+//   let day = document.querySelector('#days');
+//   day.addEventListener('mouseover', function(ent) {
+//     ent.target.style.fontSize = '30px';
+//   })
+// } sem for, mas não consegui implementar
+
+
+function zoomOut(){
+let day = document.querySelectorAll('.day');
+  for (let index = 0; index < day.length; index += 1) {
+    day[index].addEventListener('mouseout', function(ent) {
+    ent.target.style.fontSize = '20px';
+  })    
+  } 
+}
+zoomOut(); // 6 ok
