@@ -109,7 +109,7 @@ function changeInnerText(valorSexta) {
   }
 }
 let buttomFriday = document.querySelector("#btn-friday");
-buttomFriday.addEventListener("click", changeInnerText);
+buttomFriday.addEventListener("click", changeInnerText); // 5 ok
 
 function zoomIn(day) {
   for (let index = 0; index < day.length; index += 1) {
@@ -157,16 +157,23 @@ function changeClassName() {
     buttonBallGreen.className = "task";
   }
 }
-buttonBallGreen.addEventListener("click", changeClassName); // 8 ok
+buttonBallGreen.addEventListener("click", changeClassName); // 9 ok
+
+buttonBallGreen.addEventListener("click", paintNumber);
 
 function paintNumber() {
   let colorBallGreen = buttonBallGreen.style.backgroundColor;
-  for (let index = 0; index < day.length; index++) {
+  
+  for (let index = 0; index < day.length; index += 1) {
+    day[index].addEventListener('click', function (dayTarget){dayTarget.target.style.color
     if (day[index].style.backgroundColor !== colorBallGreen) {
       day[index].style.color = colorBallGreen;
-    } else {
-      day[index].style.color = "black";
+    } else if(day[index].style.color === colorBallGreen) {
+      day[index].style.color = "rgb(119,119,119)";
+      console.log('oi');
     }
+    });    
   }
 }
+paintNumber();
 let buttomDay;
