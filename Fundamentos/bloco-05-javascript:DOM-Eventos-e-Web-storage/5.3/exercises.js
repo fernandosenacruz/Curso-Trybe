@@ -111,39 +111,62 @@ function changeInnerText(valorSexta) {
 let buttomFriday = document.querySelector("#btn-friday");
 buttomFriday.addEventListener("click", changeInnerText);
 
-function zoomIn() {
-  let day = document.querySelectorAll(".day");
+function zoomIn(day) {
   for (let index = 0; index < day.length; index += 1) {
     day[index].addEventListener("mouseover", function (ent) {
       ent.target.style.fontSize = "30px";
     });
   }
 }
-zoomIn(); // 6 ok
+let day = document.querySelectorAll(".day");
+zoomIn(day); // 6 ok
 
-function zoomOut() {
-  let day = document.querySelectorAll(".day");
+function zoomOut(day) {
   for (let index = 0; index < day.length; index += 1) {
     day[index].addEventListener("mouseout", function (ent) {
       ent.target.style.fontSize = "20px";
     });
   }
 }
-zoomOut(); // 6 ok
+zoomOut(day); // 6 ok
 
-function addWork(nameWork){
-  let tarefa = document.querySelector('.my-tasks');
-  let spanTarefa = document.createElement('span');
+function addWork(nameWork) {
+  let tarefa = document.querySelector(".my-tasks");
+  let spanTarefa = document.createElement("span");
   spanTarefa.innerHTML = nameWork;
   tarefa.appendChild(spanTarefa);
   return tarefa;
-}; // 7 ok
+} // 7 ok
 
-function ballColor(color, divTarefa = addWork('Estudar')){ // divTarefa é o retorn da função addWork para ser usada como parametro para a função ballColor. 'isso acontece pq tarefa eta no escopo da função e só pode ser acessada assim'.
-  let divCor = document.createElement('div');
-  divCor.className = 'task'
+function ballColor(color, divTarefa = addWork("Estudar")) {
+  // divTarefa é o retorn da função addWork para ser usada como parametro para a função ballColor. 'isso acontece pq tarefa eta no escopo da função e só pode ser acessada assim'.
+  let divCor = document.createElement("div");
+  divCor.className = "task";
   divCor.style.backgroundColor = color;
   divTarefa.appendChild(divCor); // divTarefa retorna document.querySelector('.my-tasks');
 }
-ballColor('green');// 8 ok
+ballColor("green"); // 8 ok
 
+let buttonBallGreen = document.querySelector(".task");
+
+function changeClassName() {
+  console.log(buttonBallGreen.className !== "task selected");
+  if (buttonBallGreen.className !== "task selected") {
+    buttonBallGreen.className = "task selected";
+  } else {
+    buttonBallGreen.className = "task";
+  }
+}
+buttonBallGreen.addEventListener("click", changeClassName); // 8 ok
+
+function paintNumber() {
+  let colorBallGreen = buttonBallGreen.style.backgroundColor;
+  for (let index = 0; index < day.length; index++) {
+    if (day[index].style.backgroundColor !== colorBallGreen) {
+      day[index].style.color = colorBallGreen;
+    } else {
+      day[index].style.color = "black";
+    }
+  }
+}
+let buttomDay;
