@@ -136,6 +136,14 @@ function addWork(nameWork){
   let spanTarefa = document.createElement('span');
   spanTarefa.innerHTML = nameWork;
   tarefa.appendChild(spanTarefa);
+  return tarefa;
+}; // 7 ok
+
+function ballColor(color, divTarefa = addWork('Estudar')){ // divTarefa é o retorn da função addWork para ser usada como parametro para a função ballColor. 'isso acontece pq tarefa eta no escopo da função e só pode ser acessada assim'.
+  let divCor = document.createElement('div');
+  divCor.className = 'task'
+  divCor.style.backgroundColor = color;
+  divTarefa.appendChild(divCor); // divTarefa retorna document.querySelector('.my-tasks');
 }
-addWork("Estudar"); // 7 ok
+ballColor('green');// 8 ok
 
