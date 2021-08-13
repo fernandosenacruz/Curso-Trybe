@@ -44,7 +44,7 @@ function addDays() {
       ulList.appendChild(emptyList);
     } else if (dezDaysList[index] === 25) {
       emptyList.innerText = dezDaysList[index];
-      emptyList.className = "holidão";
+      emptyList.className = 'day friday holiday';
       ulList.appendChild(emptyList);
     } else {
       emptyList.innerText = dezDaysList[index];
@@ -65,20 +65,18 @@ function addHolidaysButton() {
 addHolidaysButton(); //2 ok
 
 let buttomHoliday = document.querySelector("#btn-holiday");
+let feriado = document.querySelectorAll(".holiday");
 
-function changeBackgroundColor() {
-  let feriado = document.querySelectorAll(".holiday");
-  let body = document.querySelector('body');
-  let styleBody = window.getComputedStyle(body, null).getPropertyValue('background-color');
+function changeBackgroundColor() {  
   for (let index = 0; index < feriado.length; index += 1) {
-    if (feriado[index].style.backgrondColor === styleBody) {
-      feriado[index].style.backgrondColor = "red";
+    if (feriado[index].style.backgroundColor != 'red') {
+      feriado[index].style.backgroundColor = "red";
     } else {
-      feriado[index].style.backgrondColor = styleBody;
+      feriado[index].style.backgroundColor = 'rgb(238,238,238)';
     }
   }
 }
-buttomHoliday.addEventListener("click", changeBackgroundColor);
+buttomHoliday.addEventListener("click", changeBackgroundColor); // 3 ok
 
 function addFridayButton() {
   let friday = document.querySelector(".buttons-container");
@@ -90,9 +88,8 @@ function addFridayButton() {
 addFridayButton(); // 4 ok
 
 let sexta = document.querySelectorAll(".friday");
-let sextaFeriado = document.querySelector(".holidão");
-
 let valorSexta = [];
+
 function pushFridayArray(){
   for (let index = 0; index < sexta.length; index += 1) {
     valorSexta.push(sexta[index].innerHTML); 
@@ -100,26 +97,20 @@ function pushFridayArray(){
   return valorSexta;
 }
 
-
-
-function changeInnerText(valorSexta = pushFridayArray()) {
-  // if(sextaFeriado.innerHTML !== "sextou") {
-  //   sextaFeriado.innerHTML = "sextou";
-  // }
-  // else {
-  //   sextaFeriado.innerHTML = sextaFeriado.innerHTML;
-  // }
-  
+function changeInnerText(valorSexta) {
+  let sextavalor = pushFridayArray();
+  console.log(valorSexta);
   for (let index = 0; index < sexta.length; index += 1) {
     if (sexta[index].innerHTML !== "sextou") {
       sexta[index].innerHTML = "sextou";
     }else {
-      sexta[index].innerHTML = valorSexta[index];
+      sexta[index].innerHTML = sextavalor[index];
     }
   }
 }
 let buttomFriday = document.querySelector("#btn-friday");
 buttomFriday.addEventListener("click", changeInnerText);
+
 
 function zoomIn() {
   let day = document.querySelectorAll('.day');
