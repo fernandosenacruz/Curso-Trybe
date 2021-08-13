@@ -44,7 +44,7 @@ function addDays() {
       ulList.appendChild(emptyList);
     } else if (dezDaysList[index] === 25) {
       emptyList.innerText = dezDaysList[index];
-      emptyList.className = 'day friday holiday';
+      emptyList.className = "day friday holiday";
       ulList.appendChild(emptyList);
     } else {
       emptyList.innerText = dezDaysList[index];
@@ -67,12 +67,12 @@ addHolidaysButton(); //2 ok
 let buttomHoliday = document.querySelector("#btn-holiday");
 let feriado = document.querySelectorAll(".holiday");
 
-function changeBackgroundColor() {  
+function changeBackgroundColor() {
   for (let index = 0; index < feriado.length; index += 1) {
-    if (feriado[index].style.backgroundColor != 'red') {
+    if (feriado[index].style.backgroundColor != "red") {
       feriado[index].style.backgroundColor = "red";
     } else {
-      feriado[index].style.backgroundColor = 'rgb(238,238,238)';
+      feriado[index].style.backgroundColor = "rgb(238,238,238)";
     }
   }
 }
@@ -90,9 +90,9 @@ addFridayButton(); // 4 ok
 let sexta = document.querySelectorAll(".friday");
 let valorSexta = [];
 
-function pushFridayArray(){
+function pushFridayArray() {
   for (let index = 0; index < sexta.length; index += 1) {
-    valorSexta.push(sexta[index].innerHTML); 
+    valorSexta.push(sexta[index].innerHTML);
   }
   return valorSexta;
 }
@@ -103,7 +103,7 @@ function changeInnerText(valorSexta) {
   for (let index = 0; index < sexta.length; index += 1) {
     if (sexta[index].innerHTML !== "sextou") {
       sexta[index].innerHTML = "sextou";
-    }else {
+    } else {
       sexta[index].innerHTML = sextavalor[index];
     }
   }
@@ -111,31 +111,31 @@ function changeInnerText(valorSexta) {
 let buttomFriday = document.querySelector("#btn-friday");
 buttomFriday.addEventListener("click", changeInnerText);
 
-
 function zoomIn() {
-  let day = document.querySelectorAll('.day');
+  let day = document.querySelectorAll(".day");
   for (let index = 0; index < day.length; index += 1) {
-    day[index].addEventListener('mouseover', function(ent) {
-    ent.target.style.fontSize = '30px';
-  })    
-  } 
+    day[index].addEventListener("mouseover", function (ent) {
+      ent.target.style.fontSize = "30px";
+    });
+  }
 }
 zoomIn(); // 6 ok
 
-// function zoomIn() {
-//   let day = document.querySelector('#days');
-//   day.addEventListener('mouseover', function(ent) {
-//     ent.target.style.fontSize = '30px';
-//   })
-// } sem for, mas não consegui implementar
-
-
-function zoomOut(){
-let day = document.querySelectorAll('.day');
+function zoomOut() {
+  let day = document.querySelectorAll(".day");
   for (let index = 0; index < day.length; index += 1) {
-    day[index].addEventListener('mouseout', function(ent) {
-    ent.target.style.fontSize = '20px';
-  })    
-  } 
+    day[index].addEventListener("mouseout", function (ent) {
+      ent.target.style.fontSize = "20px";
+    });
+  }
 }
 zoomOut(); // 6 ok
+
+function addWork(nameWork){
+  let tarefa = document.querySelector('.my-tasks');
+  let spanTarefa = document.createElement('span');
+  spanTarefa.innerHTML = nameWork;
+  tarefa.appendChild(spanTarefa);
+}
+addWork("Estudar"); // 7 ok
+
