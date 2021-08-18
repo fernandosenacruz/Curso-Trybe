@@ -1,12 +1,99 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Formulário Completo</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <h1>Formulário</h1>
+    <form action="" method="GET" enctype="multipart/form-data">
+      <label for="nome"
+        >Nome
+        <input
+          type="text"
+          name="nome"
+          id="nome"
+          placeholder="Digite primeiro nome"
+          required
+          autofocus
+          autocomplete="off"
+        />
+      </label>
+      <br />
+      <label for="sobrenome"
+        >Sobrenome
+        <input
+          type="text"
+          name="sobrenome"
+          id="sobrenome"
+          placeholder="Digite sobrenome"
+          required
+          autocomplete="off"
+        />
+      </label>
+      <br />
+      <label for="mail"
+        >E-mail
+        <input
+          type="email"
+          name="email"
+          id="mail"
+          placeholder="Digite seu e-mail"
+          autocomplete="off"
+          required
+      /></label>
+      <br />
+      <label for="senha-usuario"
+        >Senha
+        <input
+          type="password"
+          name="senha"
+          id="senha-usuario"
+          placeholder="Digite uma senha"
+          autocomplete="off"
+          required
+        />
+      </label>
+      <br />
+      <label for="input-UF"
+        >UF
+        <select name="estado" id="input-UF">
+          <option value="pe">Pernambuco</option>
+          <option value="pb">Paraíba</option>
+          <option value="rn">Rio Grande do Norte</option>
+          <option value="al">Alagoas</option>
+        </select>
+      </label>
+      <br />
+      <p>Selecione uma foto</p>
+      <input type="file" name="arquivo" id="foto-perfil" />
+      <br />
+      <p>Sexo</p>
+      <label for="masc">
+        <input type="radio" name="sexo" id="masc" value="masc" />Masculino
+      </label>
+      <br />
+      <label for="fem">
+        <input type="radio" name="sexo" id="fem" value="fem" />Feminino
+      </label>
+      <br />
+      <p>Sobre mim</p>
+      <textarea
+        name="sobre-mim"
+        id="about-me"
+        cols="15"
+        rows="5"
+        maxlength="78"
+      ></textarea>
+      <br />
+      <label for="acept">
+        <input type="checkbox" name="termo" id="acept" checked required />Ao
+        enviar você está de acordo com os termos de uso.
+      </label>
+      <br />
+      <button type="submit">Enviar</button>
+    </form>
+  </body>
 </html>
