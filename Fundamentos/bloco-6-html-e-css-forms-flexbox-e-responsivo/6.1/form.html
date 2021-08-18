@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="GET" enctype="multipart/form-data">
+        <fieldset>
+            <label for="nome">Nome
+                <input
+                type="text"
+                name="nome"
+                id="nome"
+                placeholder="Digite seu nome"
+                required
+                autofocus
+                autocomplete="off"
+                maxlength="40"
+                />
+            </label>
+            <br />
+            <label for="mail">E-mail
+                <input  
+                type="email"
+                name="email"
+                id="mail"
+                placeholder="Digite seu e-mail"
+                autocomplete="off"
+                required
+                maxlength="50"/>
+            </label>
+            <br />
+             <label for="nome">CPF
+                <input
+                type="number"
+                name="cpf"
+                id="cpf-usuario"
+                placeholder="Digite seu cpf"
+                required
+                autocomplete="off"
+                maxlength="11"
+                />
+            </label>
+            <br />
+            <label for="end">Endereço
+                <input type="text" name="endereco" id="end" required maxlength="200" placeholder="Digite seu endereço">
+            </label>
+            <br>
+            <label for="cidade">Endereço
+                <input type="text" name="city" id="cidade" required maxlength="28" placeholder="Digite a cidade em que mora">
+            </label>
+            <br>
+            <select name="estados" id="UF" required size="2">                
+            </select>
+            <label for="type1">
+                <input type="radio" name="tipo" id="type1">Casa
+            </label>
+            <label for="type2">
+                <input type="radio" name="tipo" id="type2">Apartamento
+            </label>            
+        </fieldset>
+        <fieldset>
+            <p>Resumo do Perfil</p>
+            <textarea name="text-resumo" id="resumo-perfil" cols="" rows="5" maxlength="1000" required></textarea>
+            <p>Cargo Pretendido</p>
+            <textarea name="text-cargo" id="cargo" cols="50" rows="1" maxlength="40" required></textarea>
+            <p>Descrição do Cargo</p>
+            <textarea name="descricao-cargo" id="resumo-cargo" cols="" rows="5" maxlength="500" required></textarea>
+        </fieldset>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
