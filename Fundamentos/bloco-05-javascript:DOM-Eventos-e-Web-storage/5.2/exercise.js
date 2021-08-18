@@ -75,8 +75,5 @@ section3.style.marginRight = 'auto';
 section.style.backgroundColor = "green";
 
 // requisito 15
-// let finalLi = document.querySelectorAll('section')[1].childNodes[0];
-
-ul.lastChild.remove();
-ul.removeChild(ul.lastChild);
-// for (let index = finalLi.length-2; index < finalLi.length; index += 1) {}
+ul.lastChild.remove(); // uma maneira de fazer
+ul.removeChild(ul.lastChild); // oura mandeira de fazer a mesma coisa
