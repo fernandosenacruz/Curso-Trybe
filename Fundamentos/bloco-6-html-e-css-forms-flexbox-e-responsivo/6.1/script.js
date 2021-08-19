@@ -28,6 +28,8 @@ const estados = [
   "Sergipe",
   "Tocantins",
 ];
+let validos = document.getElementById('validos');
+let invalidos = document.getElementById('invalidos');
 
 function optionGenerate() {
   for (let index = 0; index < estados.length; index += 1) {
@@ -67,6 +69,18 @@ function dateValidation(evt) {
 
 function sendButton() {
   let enviar = document.getElementById("botao-enviar");
-  enviar.addEventListener("click", dateValidation);
+  enviar.addEventListener("click", ximira);
 }
 sendButton();
+
+
+
+function ximira(evt) {
+  dateValidation(evt);
+  let formValue = document.getElementById('form');
+  for (let index = 0; index < formValue.length; index += 1) {
+    validos.innerHTML = formValue[index].value;
+    console.log(formValue[index].value)    
+  }
+
+}
