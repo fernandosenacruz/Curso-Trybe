@@ -8,8 +8,9 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="" method="GET" enctype="multipart/form-data">
+    <form action="">
         <fieldset>
+            <legend>Cadastro</legend>
             <label for="nome">Nome
                 <input
                 type="text"
@@ -70,8 +71,13 @@
             <textarea name="text-cargo" id="cargo" cols="50" rows="1" maxlength="40" required></textarea>
             <p>Descrição do Cargo</p>
             <textarea name="descricao-cargo" id="resumo-cargo" cols="" rows="5" maxlength="500" required></textarea>
+            <label for="data">Data de início
+                <input type="text" name="input-date" id="data" required placeholder="dd/mm/aaaa" maxlength="10">
+            </label>
+            <button id="botao-enviar">Enviar</button>
+            <legend>Pretenção</legend>
         </fieldset>
     </form>
-    <script src="script.js"></script>
 </body>
+<script src="script.js"></script>
 </html>
