@@ -67,20 +67,25 @@ function dateValidation(evt) {
   }
 }
 
+function ximira(evt) {
+  dateValidation(evt);
+  let formValue = document.getElementById('form');
+  for (let index = 0; index < formValue.length; index += 1) {
+    let infos = document.createElement('p');
+    if(formValue[index].name === 'fieldset' || formValue[index].checked !== true && formValue[index].name === 'tipo'){
+      continue
+    }
+    infos.innerHTML = formValue[index].value;
+    validos.appendChild(infos);
+  }
+}
+
 function sendButton() {
   let enviar = document.getElementById("botao-enviar");
   enviar.addEventListener("click", ximira);
 }
 sendButton();
 
-
-
-function ximira(evt) {
-  dateValidation(evt);
-  let formValue = document.getElementById('form');
-  for (let index = 0; index < formValue.length; index += 1) {
-    validos.innerHTML = formValue[index].value;
-    console.log(formValue[index].value)    
-  }
-
+function clearDiv() {
+  
 }

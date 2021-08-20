@@ -9,7 +9,7 @@
 </head>
 <body>
     <form action="" id="form">
-        <fieldset>
+        <fieldset name="fieldset">
             <legend>Cadastro</legend>
             <label for="nome">Nome
                 <input
@@ -58,13 +58,13 @@
             <select name="estados" id="UF" required size="2">                
             </select>
             <label for="type1">
-                <input type="radio" name="tipo" id="type1">Casa
+                <input type="radio" name="tipo" id="type1" value="casa">Casa
             </label>
             <label for="type2">
-                <input type="radio" name="tipo" id="type2">Apartamento
+                <input type="radio" name="tipo" id="type2" value="apartamento">Apartamento
             </label>            
         </fieldset>
-        <fieldset>
+        <fieldset name="fieldset">
             <p>Resumo do Perfil</p>
             <textarea name="text-resumo" id="resumo-perfil" cols="" rows="5" maxlength="1000" required></textarea>
             <p>Cargo Pretendido</p>
@@ -75,6 +75,7 @@
                 <input type="text" name="input-date" id="data" required placeholder="dd/mm/aaaa" maxlength="10">
             </label>
             <button id="botao-enviar">Enviar</button>
+            <button type="reset">Cuzcus</button>
             <legend>Pretenção</legend>
         </fieldset>
     </form>
