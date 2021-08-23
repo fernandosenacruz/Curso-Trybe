@@ -7,6 +7,7 @@
 
 body {
   background-color: rgb(247, 247, 247);
+  opacity: .9;
 }
 
 .header-container {
@@ -65,13 +66,13 @@ body {
   justify-content: space-around;
 }
 
-.card-container div {
+.card-container div, a img:nth-child(1) {
   align-items: center;
-  background-color: #5C687C;
+  justify-content: center;
+  background-color: #aa6cce;
   border: black solid 1px;
   display: flex;
   height: 150px;
-  justify-content: center;
   margin: 10px;
   flex-basis: 16%;
   flex-grow: 1;
@@ -93,4 +94,22 @@ body {
 .aside-container p {
   margin: 10px 0;
   text-align: justify;
+}
+
+.card-container div a img:nth-child(1){
+  background-clip: content-box;
+  background-size: cover;
+}
+
+img {
+  text-decoration: none;
+  cursor: zoom-in;
+}
+
+img:hover {
+  opacity: 1;
+}
+
+img:visited, img:hover, img:active {
+  color: inherit;
 }
