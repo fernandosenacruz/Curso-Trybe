@@ -113,3 +113,22 @@ img:hover {
 img:visited, img:hover, img:active {
   color: inherit;
 }
+
+@media screen and (max-width: 768px){  
+  .header-container {
+    flex-direction: column;
+    height: 100px;
+  }
+  .menu-container ul li{
+    font-size: smaller;
+  }
+  h2 {
+    font-size: 15px;
+    margin: 20px 0;
+  }
+  .card-container div, a img:nth-child(1){
+    height: 80px; 
+    margin: 5px;
+  }
+ 
+}
