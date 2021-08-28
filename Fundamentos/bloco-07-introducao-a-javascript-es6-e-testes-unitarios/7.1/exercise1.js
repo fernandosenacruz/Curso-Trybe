@@ -9,10 +9,8 @@
 
 //   testingScope(true);
 
-const testingScope = (escopo) =>
-  escopo === true
-    ? `Não devo ser utilizada fora do meu escopo (if).\nÓtimo, fui utilizada no escopo !`
-    : `Não devo ser utilizada fora meu escopo (else)\n`;
+//1 refatorada
+const testingScope = (escopo) => escopo ? `Ótimo, fui utilizada no escopo !` : `Não devo ser utilizada fora meu escopo (else)\n`;
 
 console.log(testingScope(true));
 console.log(testingScope(false));
@@ -30,14 +28,13 @@ oddsAndEvens.sort((ximira, xibil) => {
 console.log(oddsAndEvens);
 
 
-// aula ao vivo
-
+//aula ao vivo
 const studant = {
   name: 'ximira',
   tryber: true,
-  greet: (greet) => 
-  (greet === true) ? `Olá, ${studant.name}, seja benvindo`
-  : `Pega o beco ${studant.name}, c não é tryber!`
+  greet: () => this.tryber ? `Olá, ${studant.name}, seja benvindo` : `Pega o beco ${studant.name}, c não é tryber!`
 }
 
 console.log(studant.greet(false));
+
+
