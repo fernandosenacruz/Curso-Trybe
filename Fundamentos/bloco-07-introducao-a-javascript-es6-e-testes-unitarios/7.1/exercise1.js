@@ -19,11 +19,7 @@ console.log(testingScope(false));
 
 const oddsAndEvens = [13, 3, 4, 10, 7, 2];
 
-oddsAndEvens.sort((ximira, xibil) => {
-  if (ximira > xibil) return 1;
-  if (xibil > ximira) return -1;
-  return 0;
-});
+oddsAndEvens.sort((ximira, xibil) => ximira - xibil);
 
 console.log(oddsAndEvens);
 
