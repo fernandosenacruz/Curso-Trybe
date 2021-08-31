@@ -43,7 +43,7 @@ customerInfo(order);
 const orderModifier = (order) => {
     order.name = 'Luiz Silva';
     order.payment.total = 50;
-    console.log(`Olá ${order.name}, o total do seu pedido de ${Object.keys(order.order.pizza).join(', ')} e ${order.order.drinks.coke.type}, é de R$ ${order.payment.total}.`)
+    console.log(`Olá ${order.name}, o total do seu pedido de ${Object.keys(order.order.pizza).join(', ')} e ${order.order.drinks.coke.type}, é de R$ ${order.payment.total},00 .`)
 }
 
 orderModifier(order);
