@@ -3,22 +3,12 @@ const assert = require("assert")
 const books = require('./arrayBase');
 //2
 function smallerName() {
-  let nameBook;
-//   books.forEach((element, index, arr) => {
-//     if (index + 1 < arr.length) {
-//       if (element.name.length > arr[index + 1].name.length) {
-//         nameBook = element;
-//       } else {
-//         nameBook = arr[index + 1];
-//       }
-//     } else {
-//       return nameBook;
-//     }
-//   });
-  const xelo = books.sort((a, b) => a.name.length - b.name.length);
-  nameBook = xelo[0].name;
-  //nameBook = xelo[xelo.length-1].name; forma de pegar o maior 
-  return nameBook;
+  let nameBook = books[0].name;
+  books.forEach((element) => {
+    if (element.name.length < nameBook.length) nameBook = element.name}
+  );
+  // return [...books].sort((a, b) => a.name.length - b.name.length)[0].name;
+  // return [...books].sort((a, b) => b.name.length - a.name.length)[0].name; forma de pegar o maior 
+  // return nameBook;
 }
-
 assert.strictEqual(smallerName(), 'Duna');
