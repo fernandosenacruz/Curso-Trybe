@@ -1,21 +1,21 @@
 const books = require("../8.2/arrayBase");
-const assert = require('assert');
+const assert = require("assert");
 
 const expectedResult = [
-  'Frank Herbert',
-  'George R. R. Martin',
-  'Isaac Asimov',
-  'J. R. R. Tolkien',
+  "Frank Herbert",
+  "George R. R. Martin",
+  "Isaac Asimov",
+  "J. R. R. Tolkien",
 ];
 
 function fantasyOrScienceFictionAuthors() {
-  let nameAuthor = [];
+  let authors = [];
   books.filter((book) => {
-    if (book.genre === 'Ficção Científica' || book.genre === 'Fantasia') {
-      nameAuthor.push(book.author.name);
-    };
+    if (book.genre === "Ficção Científica" || book.genre === "Fantasia") {
+      return authors.push(book.author.name);
+    }
   });
-    return nameAuthor.sort();
+  return authors.sort();
 }
 
 assert.deepStrictEqual(fantasyOrScienceFictionAuthors(), expectedResult);
