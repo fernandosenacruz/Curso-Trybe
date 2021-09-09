@@ -8,10 +8,11 @@ const books = require('../8.2/arrayBase')
 
 const expectedResult = 43;
 
-const yearInTheRelease = ((releaseYear, birthYear, authors) => (releaseYear - birthYear) / authors);
+const yearInTheRelease = ((releaseYear, birthYear, books) => (releaseYear.releaseYear - birthYear.author.birthYear) / books.length);
 
-function averageAge() {
+function averageAge(books) {
   return books.reduce((yearInTheRelease));
 }
 
-assert.strictEqual(averageAge(), expectedResult);
+console.log(averageAge(books))
+// assert.strictEqual(averageAge(books), expectedResult);
