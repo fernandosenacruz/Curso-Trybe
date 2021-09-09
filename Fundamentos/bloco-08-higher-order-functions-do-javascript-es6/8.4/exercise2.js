@@ -7,7 +7,7 @@ const books = require('../8.2/arrayBase')
 const expectedResult = "George R. R. Martin, J. R. R. Tolkien, Isaac Asimov, Frank Herbert, Stephen King, H. P. Lovecraft.";
 
 function reduceNames() {
-  return books.reduce((book) => book.author.name);
+  
 }
 
 assert.strictEqual(reduceNames(), expectedResult);
