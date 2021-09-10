@@ -1,8 +1,6 @@
 /*Dada o array de nomes, retorne a quantidade de vezes em que aparecem a 
 letra a maiúscula ou minúscula.*/
 
-const assert = require("assert");
-
 const books = require('../8.2/arrayBase');
 
 const assert = require('assert');
@@ -14,7 +12,9 @@ const names = [
 ];
 
 function containsA() {
-  
+  return names.reduce((acc, name) => {
+    return acc += name.match(/a/gi).length;
+  }, 0);
 }
 
 assert.deepStrictEqual(containsA(), 20);
