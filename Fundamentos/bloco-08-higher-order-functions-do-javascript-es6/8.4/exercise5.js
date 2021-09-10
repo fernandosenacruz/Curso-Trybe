@@ -1,8 +1,6 @@
 /*Dada o array de nomes, retorne a quantidade de vezes em que aparecem a 
 letra a maiúscula ou minúscula.*/
 
-const books = require('../8.2/arrayBase');
-
 const assert = require('assert');
 
 const names = [
