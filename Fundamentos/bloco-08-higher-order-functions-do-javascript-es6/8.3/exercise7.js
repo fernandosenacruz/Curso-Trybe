@@ -15,7 +15,9 @@ function authorWith3DotsOnName() {
     //     }
     // })
     // return nameAuthor;
-    return books.find((book) => book.author.name.split(' ').filter((name) => name.endsWith('.')).length === 3).name;
+    return books.find((book) => 
+    book.author.name.split(' ').filter((name) => 
+    name.endsWith('.')).length === 3).name;
 }
 
 assert.deepStrictEqual(authorWith3DotsOnName(), expectedResult);
