@@ -4,7 +4,7 @@ Dica: use default params .*/
 
 const assert = require('assert');
 
-// escreva greet abaixo
+const greet = ((person, greet = 'Hi') => `${greet} ${person}`);
 
 assert.strictEqual(greet('John'), 'Hi John');
 assert.strictEqual(greet('John', 'Good morning'), 'Good morning John');
