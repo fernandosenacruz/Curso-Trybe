@@ -1,4 +1,5 @@
-/*4 - Escreva uma função filterPeople que, dada uma lista de pessoas, retorna todas as pessoas australianas que nasceram no século 20:
+/*4 - Escreva uma função filterPeople que, dada uma lista de pessoas, 
+retorna todas as pessoas australianas que nasceram no século 20:
 Dica: use object destructuring*/
 
 const assert = require('assert');
@@ -31,7 +32,8 @@ const people = [
   },
 ];
 
-// escreva filterPeople abaixo
+const filterPeople = (people) => people.filter(({nationality, bornIn}) => 
+nationality === "Australian" && bornIn > 1900 && bornIn < 2001);
 
 const filteredPeople = filterPeople(people);
 
