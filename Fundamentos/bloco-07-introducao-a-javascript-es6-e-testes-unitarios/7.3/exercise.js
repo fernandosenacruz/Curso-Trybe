@@ -2,13 +2,13 @@
 //1
 // const assert = require('assert');
 
-// function sum(a, b) {
-//   if (typeof a !== 'number' || typeof b !== 'number') {
-//     throw new Error('parameters must be numbers');
-//   }
+function sum(a, b) {
+  if (typeof a !== 'number' || typeof b !== 'number') {
+    throw new Error('parameters must be numbers');
+  }
 
-//   return a + b;
-// }
+  return a + b;
+}
 
 // // implemente seus testes aqui
 // // 1
@@ -32,17 +32,19 @@ function myRemove(arr, item) {
   }
   return newArr;
 }
-// implemente seus testes aqui
-//1
-assert.deepStrictEqual(myRemove([1, 2, 3, 4], 3), [1, 2, 4]);
+// // implemente seus testes aqui
+// //1
+// assert.deepStrictEqual(myRemove([1, 2, 3, 4], 3), [1, 2, 4]);
 
-//2
-assert.notDeepStrictEqual(myRemove([1, 2, 3, 4], 3), [1, 2, 3, 4]);
+// //2
+// assert.notDeepStrictEqual(myRemove([1, 2, 3, 4], 3), [1, 2, 3, 4]);
 
-//3
-const array2 = [1, 2, 3, 4];
-myRemove(array2, 4);
-assert.deepStrictEqual(array2, [1, 2, 3, 4]);
+// //3
+// const array2 = [1, 2, 3, 4];
+// myRemove(array2, 4);
+// assert.deepStrictEqual(array2, [1, 2, 3, 4]);
 
-//4
-assert.deepStrictEqual(myRemove([1, 2, 3, 4], 5), [1, 2, 3, 4]);
+// //4
+// assert.deepStrictEqual(myRemove([1, 2, 3, 4], 5), [1, 2, 3, 4]);
+
+module.exports = {myRemove, sum};
