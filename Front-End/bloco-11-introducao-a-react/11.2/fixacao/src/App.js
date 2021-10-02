@@ -79,20 +79,20 @@ function App() {
           alternativeText="Cute cat staring"
         />
       </section>
-      {albums.map((album) => (
+      {albums.map((album, index) => (
         <div className="ximira">
-          <Album album={album} />
+          <Album album={album} key={index}/>
         </div>
       ))}
-      {people.map((person) => (
+      {people.map((person, index) => (
         <div className='ximira'>
-          <UserProfile user={person} />
+          <UserProfile user={person} key={index}/>
         </div>
       ))}
-      {orders.map((order) => (
+      {orders.map((order, index) => (
         <div>
           <h1> Orders recently created </h1>
-          <Order order={order} />
+          <Order order={order} key={index}/>
         </div>
       ))}
     </>

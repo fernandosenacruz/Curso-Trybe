@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from './Image';
+import PropTypes from 'prop-types';
 
 class UserProfile extends React.Component {
   render() {
@@ -11,6 +12,17 @@ class UserProfile extends React.Component {
       </div>
     );
   }
+}
+
+UserProfile.proptype = {
+  name: PropTypes.string.isRequired,
+  email: PropTypes.string.isRequired,
+  avatar: PropTypes.string.isRequired
+}
+
+UserProfile.defaultProps = {
+  name: 'Ximira',
+  email: 'esqueceu o email taba!'
 }
 
 export default UserProfile;
