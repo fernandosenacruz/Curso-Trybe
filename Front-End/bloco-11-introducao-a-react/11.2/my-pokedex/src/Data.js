@@ -10,7 +10,7 @@ imagem do pokemon.
 */
 
 import React from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 /* 2 - Pokedex : esse componente representa a enciclopédia de pokemons. 
 Esse componente recebe como entrada uma lista de pokemons para serem mostrados na tela.
@@ -33,17 +33,17 @@ class Pokemon extends React.Component {
   }
 }
 
-// Pokemon.proptype = {
-//     pokemon: PropTypes.arrayof(PropTypes.shape({
-//         name: PropTypes.string,
-//         type: PropTypes.string,
-//         value: PropTypes.number,
-//         measurementUnit: PropTypes.string,
-//     })).isRequired,
-// };
+Pokemon.proptype = {
+    pokemon: PropTypes.arrayOf(PropTypes.shape({
+        name: PropTypes.string,
+        type: PropTypes.string,
+        value: PropTypes.number,
+        measurementUnit: PropTypes.string,
+    })).isRequired,
+};
 
-// Pokemon.defaultProps = {
-//     pokemon: []
-// }
+Pokemon.defaultProps = {
+    pokemon: []
+}
 
 export default Pokemon;

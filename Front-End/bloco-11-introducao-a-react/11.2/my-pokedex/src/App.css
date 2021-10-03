@@ -7,9 +7,18 @@ padding: 10px;
 margin: 10px;
 }
 
+.xibil {
+    display: flex;
+    justify-content: center;
+    color: rgb(176, 182, 176);
+    text-shadow: 0 1px 2px rgb(233, 68, 68);
+}
+
 .ximira {
     display: flex;
-    background-color: rgb(207, 202, 202);
+    background-color: rgb(233, 227, 227);
     width: 100px;
     text-align: center;
+    border: solid gray 1px;
+    border-radius: 10px;
 }
