@@ -128,9 +128,9 @@ function App() {
   ];
   return (
       <><h1 className='xibil'>FATDex</h1><main>
-      {pokemon.sort((a, b) => a.id - b.id).map((poke, index) => (
+      {pokemon.sort((a, b) => a.id - b.id).map((poke) => (
         <div className="ximira">
-          <Pokemon key={index} pokemon={poke} />
+          <Pokemon key={poke.id} pokemon={poke} />
         </div>
       ))}
     </main></>
