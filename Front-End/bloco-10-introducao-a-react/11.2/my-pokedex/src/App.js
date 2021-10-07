@@ -32,12 +32,21 @@ export default class App extends React.Component {
 xelo(char) {
     this.setState((prevState, _props) => {
       let heman;
-    if (prevState.position < 0 || prevState.position === array_pokemon.length) {
-      heman = 0
-    }else {
-    if (char === 'a') heman = prevState.position + 1;
-    if (char === 'b') heman = prevState.position - 1;
-    }
+      if (char === 'a') {
+        if (this.state.position + 1 === array_pokemon.length ) {
+          heman = 0
+        }else {
+          heman = prevState.position + 1;
+
+        }
+      }
+      if (char === 'b') {
+        if (this.state.position -1 < 0) {
+          heman = array_pokemon.length -1;
+        }else {
+          heman = prevState.position - 1;
+        }
+      }
     return {
         position: heman
       }
@@ -48,7 +57,7 @@ xelo(char) {
     return (
         <><h1 className='xibil'>FATDex</h1><main>
           <div className="ximira">
-            <Pokemon key={array_pokemon[this.state.position].name} pokemon={array_pokemon[this.state.position - 1]} />
+            <Pokemon key={array_pokemon[this.state.position].name} pokemon={array_pokemon[this.state.position]} />
           </div>
           <button onClick={() => this.xelo('b')}>Previous pokemon</button>
           <button onClick={() => this.xelo('a')}>Next pokemon</button>
