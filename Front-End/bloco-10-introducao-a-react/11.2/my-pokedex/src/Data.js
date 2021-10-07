@@ -17,17 +17,18 @@ Esse componente recebe como entrada uma lista de pokemons para serem mostrados n
 Para cada um desses pokemons recebidos, Pokedex chama o componente Pokemon.
 */
 
-class Pokemon extends React.Component {
+export default class Pokemon extends React.Component {
   render() {
+    const {pokemon: {name, type, image, moreInfo,averageWeight:{value, measurementUnit}}} = this.props;
     return (
       <section>
-        <h3>{this.props.pokemon.name}</h3>
-        <p>Tipo: {this.props.pokemon.type}</p>
+        <h3>{name}</h3>
+        <p>Tipo: {type}</p>
         <p>
           Peso:{' '}
-          {`${this.props.pokemon.averageWeight.value}/${this.props.pokemon.averageWeight.measurementUnit}`}
+          {`${value}/${measurementUnit}`}
         </p>
-        <img src={this.props.pokemon.image} alt={this.props.pokemon.moreInfo} />
+        <img src={image} alt={moreInfo} />
       </section>
     );
   }
@@ -45,5 +46,3 @@ Pokemon.proptype = {
 Pokemon.defaultProps = {
     pokemon: []
 }
-
-export default Pokemon;
