@@ -12,7 +12,18 @@ export default class Cidade extends React.Component{
   render() {
     const {value, handleChange } = this.props;
     return (
-      
+     <label className="">
+        Cidade: 
+        <input
+          type="text"
+          name="cidade"
+          id="cidade"
+          value={value}
+          onBlur={handleChange}
+          maxLength="28"
+          required
+        />
+      </label> 
     )
   }
 }

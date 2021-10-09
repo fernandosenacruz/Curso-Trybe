@@ -14,7 +14,15 @@ export default class Nome extends React.Component {
     return (
       <label className="">
         Nome:
-        <textarea name="nome" value={value} onChange={handleChange} maxLength='40'/>
+        <input
+          type="text"
+          name="nome"
+          id="nome"
+          value={value}
+          onChange={handleChange}
+          maxLength="40"
+          required
+        />
       </label>
     );
   }
