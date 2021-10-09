@@ -19,6 +19,7 @@ export default class Cidade extends React.Component{
           name="cidade"
           id="cidade"
           value={value}
+          onChange={handleChange}
           onBlur={handleChange}
           maxLength="28"
           required
