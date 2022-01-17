@@ -17,5 +17,7 @@
 # Ignore all local history of files
 .history
 .ionide
+/Fundamentos
+/Front-End
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode
