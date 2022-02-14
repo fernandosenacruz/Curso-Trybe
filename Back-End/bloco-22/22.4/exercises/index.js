@@ -1,5 +1,5 @@
 const express = require('express');
-const bodyParser = require('body-parser');
+// const bodyParser = require('body-parser');
 const rescue = require('express-rescue');
 
 const simpsonsUtils = require('./fs-utils');
