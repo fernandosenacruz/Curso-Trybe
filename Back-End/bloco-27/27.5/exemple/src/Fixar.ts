@@ -1,10 +1,10 @@
-// class Passenger {
-//   constructor (public nome:string, public cpf:number) { }
-// }
+class Passenger {
+  constructor (public nome:string, public cpf:number) { }
+}
 
-// class ShippedItem {
-//   constructor (public nome:string, public id:number, public customerID:string) { }
-// }
+class ShippedItem {
+  constructor (public nome:string, public id:number, public customerID:string) { }
+}
 
 // class Flight {
 //   constructor (public num:number, public passengers:Passenger[]) { }
@@ -60,14 +60,6 @@
 //     }
 //   }
 // }
-
-class Passenger {
-  constructor (public nome:string, public cpf:number) { }
-}
-
-class ShippedItem {
-  constructor (public nome:string, public id:number, public customerID:string) { }
-}
 
 class Flight {
   // Primeiro, ajustamos o construtor da classe Flight
