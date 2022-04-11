@@ -9,8 +9,9 @@ export default class ReadingTracker {
   constructor(readingGoal: number, public notificator: Notificator = new ConsoleNotification()) {
     this.readingGoal = readingGoal;
     this.booksRead = 0;
+    console.log(notificator);
   }
-
+  
   trackReadings(readsCount: number): void {
     this.booksRead += readsCount;
     if (this.booksRead >= this.readingGoal) {
